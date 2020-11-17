@@ -19,7 +19,7 @@ Ensure the `@netacea/cloudflare` package is up to date by running:
 npm i @netacea/cloudflare@latest
 ```
 
-Insert your Netacea API and Secret key into `./src/NetaceaConfig.json`. Ensure you are [logged into wrangler](https://github.com/cloudflare/wrangler#-login). Intert your wrangler credentials into the `wrangler.toml` file in the root directory (you only need to change `account_id`, `route` and `zone_id` - the rest is okay).
+Insert your Netacea API and Secret key into `./src/NetaceaConfig.json`. Ensure you are [logged into wrangler](https://github.com/cloudflare/wrangler#-login). Insert your wrangler credentials into the `wrangler.toml` file in the root directory (you only need to change `account_id`, `route` and `zone_id` - the rest is okay).
 
 
 ## 💻 Developing
