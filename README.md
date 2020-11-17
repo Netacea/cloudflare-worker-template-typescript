@@ -23,9 +23,9 @@ Insert your Netacea API and Secret key into `./src/NetaceaConfig.json`. Ensure y
 
 
 ## 💻 Developing
-All code should be changed in `./src/handler.ts` where the comments dictate. As long as `worker.run(event, originRequest)` and `event.waitUntil(worker.ingest(event.request, response))` are called - Netacea should work as expected!
-[Cloudflare worker documentation](https://developers.cloudflare.com/workers/).
-
+If you need to extend or enhance the functionality of the Cloudflare Worker, the documentation can be found [here](https://developers.cloudflare.com/workers/).
+Code extensions should be made in `./src/handler.ts`
+Please ensure that `worker.run(event, originRequest)` and `event.waitUntil(worker.ingest(event.request, response))` are called.
 
 ## ✔ Testing
 - `npm run test` - This will run a set of simple method tests against the worker (see `./tests/handler.test.ts`)
