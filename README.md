@@ -23,7 +23,8 @@ Insert your Netacea API and Secret key into `./src/NetaceaConfig.json`. Ensure y
 
 
 ## 💻 Developing
-Want more than the basic worker? Feel like adding headers or manipulating the response? See the [cloudflare worker documentation](https://developers.cloudflare.com/workers/). All code should be changed in `./src/handler.ts` where the comments dictate. As long as `worker.run(event, originRequest)` and `event.waitUntil(worker.ingest(event.request, response))` are called - Netacea should work as expected!
+All code should be changed in `./src/handler.ts` where the comments dictate. As long as `worker.run(event, originRequest)` and `event.waitUntil(worker.ingest(event.request, response))` are called - Netacea should work as expected!
+[Cloudflare worker documentation](https://developers.cloudflare.com/workers/).
 
 
 ## ✔ Testing
@@ -35,5 +36,4 @@ Want more than the basic worker? Feel like adding headers or manipulating the re
 `npm run publish-cf` is your friend. This will publish to your cloudflare distribution
 
 ## 🤢 Issues
-
 If you run into issues with this specific project, please feel free to file an issue [here](https://github.com/Netacea/cloudflare-worker-template-typescript/issues). If the problem is with Wrangler, please file an issue [here](https://github.com/cloudflare/wrangler/issues).
