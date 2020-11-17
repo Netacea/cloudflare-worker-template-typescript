@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2018",
+    "lib": ["es2018", "webworker"],
+    "sourceMap": true,
+    "strict": true,
+    "outDir": "./dist",
+    "resolveJsonModule": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "types": ["@cloudflare/workers-types"]
+  },
+  "include": [
+    "index.ts",
+    "src/**/*.ts",
+    "types/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist/"
+  ]
+}

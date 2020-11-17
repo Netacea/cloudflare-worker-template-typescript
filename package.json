@@ -1,0 +1,44 @@
+{
+  "name": "@netacea/cloudflare-worker-template-typescript",
+  "version": "1.0.0",
+  "description": "A simple Cloudflare worker with Netacea built in.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "webpack",
+    "publish-cf": "wrangler publish",
+    "watch-cf": "wrangler preview --watch",
+    "dev-cf": "wrangler dev",
+    "test": "npx nyc tape -r ts-node/register './tests/*.test.ts'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Netacea/cloudflare-worker-template-typescript.git"
+  },
+  "keywords": [
+    "netacea",
+    "cloudflare",
+    "wrangler"
+  ],
+  "author": "Jack Scotson <jack.scotson@netacea.com> (https://netacea.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Netacea/cloudflare-worker-template-typescript/issues"
+  },
+  "homepage": "https://github.com/Netacea/cloudflare-worker-template-typescript#readme",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^2.1.0",
+    "@types/service-worker-mock": "^2.0.1",
+    "@types/tape": "^4.13.0",
+    "nyc": "^15.1.0",
+    "service-worker-mock": "^2.0.5",
+    "tape": "^5.0.1",
+    "ts-loader": "^8.0.11",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5",
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0"
+  },
+  "dependencies": {
+    "@netacea/cloudflare": "^1.0.10"
+  }
+}
