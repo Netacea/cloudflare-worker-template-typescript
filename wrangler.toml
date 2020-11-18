@@ -1,0 +1,7 @@
+name = "netacea-worker"
+type = "webpack"
+webpack_config = "webpack.config.js"
+
+account_id = "your-account-id"
+route = "your-route"
+zone_id = "your-zone-id"
