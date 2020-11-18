@@ -18,8 +18,9 @@ Ensure the `@netacea/cloudflare` package is up to date by running:
 ```bash
 npm i @netacea/cloudflare@latest
 ```
-
-Insert your Netacea API and Secret key into `./src/NetaceaConfig.json`. Ensure you are [logged into wrangler](https://github.com/cloudflare/wrangler#-login). Insert your wrangler credentials into the `wrangler.toml` file in the root directory (you only need to change `account_id`, `route` and `zone_id` - the rest is okay).
+- Insert your Netacea API and Secret key into `./src/NetaceaConfig.json`.
+- Ensure you are [logged into wrangler](https://github.com/cloudflare/wrangler#-login).
+- Insert your wrangler credentials into the `wrangler.toml` file in the root directory (you only need to change `account_id`, `route` and `zone_id` - the rest is okay).
 
 
 ## 💻 Developing
@@ -35,5 +36,5 @@ Please ensure that `worker.run(event, originRequest)` and `event.waitUntil(worke
 ## ☁ Publishing
 `npm run publish-cf` is your friend. This will publish to your cloudflare distribution
 
-## 🤢 Issues
+## ❗ Issues
 If you run into issues with this specific project, please feel free to file an issue [here](https://github.com/Netacea/cloudflare-worker-template-typescript/issues). If the problem is with Wrangler, please file an issue [here](https://github.com/cloudflare/wrangler/issues).
