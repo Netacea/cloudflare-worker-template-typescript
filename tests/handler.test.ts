@@ -23,6 +23,7 @@ tape('Request handled', async (tap: tape.Test) => {
   for (const method of methods) {
     tap.test(`${method} - Handled`, async (t: tape.Test) => {
       let waitUntilCalledTimes = 0
+      // @ts-expect-error
       const result = await handleRequestWithNetacea({
         request: new Request('/', {method}),
         waitUntil: async (promiseResult: Promise<any>) => {
