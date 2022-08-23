@@ -41,7 +41,7 @@
     "xo": "^0.34.2"
   },
   "dependencies": {
-    "@netacea/cloudflare": "^1.6.4"
+    "@netacea/cloudflare": "^1.6.9"
   },
   "xo": {
     "space": true,
