@@ -44,21 +44,5 @@
   },
   "dependencies": {
     "@netacea/cloudflare": "^1.6.10"
-  },
-  "xo": {
-    "space": true,
-    "semicolon": false,
-    "rules": {
-      "import/extensions": [
-        "error",
-        "ignorePackages",
-        {
-          "js": "never",
-          "jsx": "never",
-          "ts": "never",
-          "tsx": "never"
-        }
-      ]
-    }
   }
 }
