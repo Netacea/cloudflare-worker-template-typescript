@@ -5,7 +5,7 @@ const worker = new Cloudflare(NetaceaConfig as CloudflareConstructorArgs)
 export async function handleRequestWithNetacea(
   event: FetchEvent
 ): Promise<Response> {
-  const response = await worker.run(event, originRequest, NetaceaConfig.mitigationTimeout)
+  const response = await worker.run(event, originRequest)
   event.waitUntil(worker.ingest(event.request, response))
   return response
 }
