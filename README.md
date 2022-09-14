@@ -28,7 +28,7 @@ If you need to extend or enhance the functionality of the Cloudflare Worker, the
 Code extensions should be made in `./src/handler.ts`
 Please ensure that `worker.run(event, originRequest)` and `event.waitUntil(worker.ingest(event.request, response))` are called.
 
-The `worker.run()` function accepts third optional number argument which is timeout (in ms) used to determine how long to wait for Mitigation Service's response. If waiting time exceeds timeout then the call to Mitigation Service is dropped and only response from server is returned.  
+The `worker.run()` function accepts third optional number argument which is timeout (in ms) used to determine how long to wait for Mitigation Service's response. If waiting time exceeds timeout then the call to Mitigation Service is dropped and only response from server is returned. The timeout is configured in the `NetaceaConfig.json` file.
 
 ## ✔ Testing
 - `npm run test` - This will run a set of simple method tests against the worker (see `./tests/handler.test.ts`)
