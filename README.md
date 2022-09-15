@@ -23,12 +23,13 @@ npm i @netacea/cloudflare@latest
 
 ## ⚠️ Configuration
 
-Configuration can be performed in `NetaceaConfig.json` file which can be found in the `./src`.
-Here you can find three parameters which need to be properly configured in order to run Netacea's Mitigation Service properly.
+Configuration of the integration can be performed in the `NetaceaConfig.json` file, in the `./src` directory.
+Here you can find several parameters which need to be properly configured:
 
-  - `apiKey` - is a globally unique identifier required for the integration to call Netacea's APIs.  
-  - `secretKey` - is a string that is being used as a key to access hashed cookies. It allows secure transmission.
-  - `timeout` - miliseconds used to determine how long to wait for Mitigation Service's response. If waiting time exceeds timeout then the call to Mitigation Service is dropped and only response from server is returned.
+  - `apiKey` - the API Key for your domain. Provided by Netacea. Used to communicate with the Mitigation and Ingest APIs.
+  - `secretKey` - the Secret Key for your domain. Provided by Netacea. Used to check the authenticity of cookies.
+  - `mitigationType` - either "INGEST" or "MITIGATE" to disable / enable mitigation, respectively.
+  - `timeout` (optional) - the number of milliseconds to wait for a response from the Mitigation API before proceeding to the origin website. Default 3000ms.
 
 ## 💻 Developing
 If you need to extend or enhance the functionality of the Cloudflare Worker, the documentation can be found [here](https://developers.cloudflare.com/workers/).
