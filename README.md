@@ -18,17 +18,22 @@ Ensure the `@netacea/cloudflare` package is up to date by running:
 ```bash
 npm i @netacea/cloudflare@latest
 ```
-- Insert your Netacea API and Secret key into `./src/NetaceaConfig.json`.
 - Ensure you are [logged into wrangler](https://github.com/cloudflare/wrangler#-login).
 - Insert your wrangler credentials into the `wrangler.toml` file in the root directory (you only need to change `account_id`, `route` and `zone_id` - the rest is okay).
 
+## ⚠️ Configuration
+
+Configuration can be performed in `NetaceaConfig.json` file which can be found in the `./src`.
+Here you can find three parameters which need to be properly configured in order to run Netacea's Mitigation Service properly.
+
+  - `apiKey` - is a globally unique identifier required for the integration to call Netacea's APIs.  
+  - `secretKey` - is a string that is being used as a key to access hashed cookies. It allows secure transmission.
+  - `timeout` - miliseconds used to determine how long to wait for Mitigation Service's response. If waiting time exceeds timeout then the call to Mitigation Service is dropped and only response from server is returned.
 
 ## 💻 Developing
 If you need to extend or enhance the functionality of the Cloudflare Worker, the documentation can be found [here](https://developers.cloudflare.com/workers/).
 Code extensions should be made in `./src/handler.ts`
 Please ensure that `worker.run(event, originRequest)` and `event.waitUntil(worker.ingest(event.request, response))` are called.
-
-In the `NetaceaConfig.json` file you can find timeout (in ms) used to determine how long to wait for Mitigation Service's response. If waiting time exceeds timeout then the call to Mitigation Service is dropped and only response from server is returned.
 
 ## ✔ Testing
 - `npm run test` - This will run a set of simple method tests against the worker (see `./tests/handler.test.ts`)
