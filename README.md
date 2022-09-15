@@ -18,10 +18,18 @@ Ensure the `@netacea/cloudflare` package is up to date by running:
 ```bash
 npm i @netacea/cloudflare@latest
 ```
-- Insert your Netacea API and Secret key into `./src/NetaceaConfig.json`.
 - Ensure you are [logged into wrangler](https://github.com/cloudflare/wrangler#-login).
 - Insert your wrangler credentials into the `wrangler.toml` file in the root directory (you only need to change `account_id`, `route` and `zone_id` - the rest is okay).
 
+## ⚠️ Configuration
+
+Configuration of the integration can be performed in the `NetaceaConfig.json` file, in the `./src` directory.
+Here you can find several parameters which need to be properly configured:
+
+  - `apiKey` - the API Key for your domain. Provided by Netacea. Used to communicate with the Mitigation and Ingest APIs.
+  - `secretKey` - the Secret Key for your domain. Provided by Netacea. Used to check the authenticity of cookies.
+  - `mitigationType` - either "INGEST" or "MITIGATE" to disable / enable mitigation, respectively.
+  - `timeout` (optional) - the number of milliseconds to wait for a response from the Mitigation API before proceeding to the origin website. Default 3000ms.
 
 ## 💻 Developing
 If you need to extend or enhance the functionality of the Cloudflare Worker, the documentation can be found [here](https://developers.cloudflare.com/workers/).

@@ -1,5 +1,6 @@
 {
   "apiKey": "",
   "secretKey": "",
-  "mitigationType": "INGEST"
+  "mitigationType": "INGEST",
+  "timeout": 3000
 }
