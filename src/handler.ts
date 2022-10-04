@@ -1,6 +1,6 @@
-import Cloudflare, {CloudflareConstructorArgs} from '@netacea/cloudflare'
-import * as NetaceaConfig from './NetaceaConfig.json'
-const worker = new Cloudflare(NetaceaConfig as CloudflareConstructorArgs)
+import Cloudflare from '@netacea/cloudflare'
+
+const worker = new Cloudflare()
 
 export async function handleRequestWithNetacea(
   event: FetchEvent
