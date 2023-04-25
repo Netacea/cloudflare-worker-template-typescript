@@ -43,6 +43,6 @@
     "webpack-cli": "^4.2.0"
   },
   "dependencies": {
-    "@netacea/cloudflare": "^1.6.12"
+    "@netacea/cloudflare": "^5.1.14"
   }
 }
