@@ -8,6 +8,8 @@ A simple Cloudflare worker with Netacea built in.
 
 This template is meant to be used with [Wrangler](https://github.com/cloudflare/wrangler). If you are not already familiar with the tool, we recommend that you install the tool and configure it to work with your [Cloudflare account](https://dash.cloudflare.com). Documentation can be found [here](https://developers.cloudflare.com/workers/tooling/wrangler/).
 
+Node version 14 or later and npm version 9 or later is required.
+
 To generate using Wrangler, run this command:
 
 ```bash
