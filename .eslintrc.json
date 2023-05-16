@@ -17,6 +17,9 @@
     "plugins": [
         "@typescript-eslint"
     ],
+    "ignorePatterns": [
+        "webpack.config.js"
+    ],
     "rules": {
         "@typescript-eslint/interface-name-prefix": "off",
         "@typescript-eslint/explicit-function-return-type": "off",
