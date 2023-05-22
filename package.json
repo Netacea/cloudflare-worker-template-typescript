@@ -5,9 +5,9 @@
   "main": "./dist/index.js",
   "scripts": {
     "build": "webpack",
-    "publish-cf": "wrangler publish",
-    "watch-cf": "wrangler preview --watch",
-    "dev-cf": "wrangler dev",
+    "publish": "npm run build && npx wrangler publish",
+    "dev": "npm run build && npx wrangler dev",
+    "dev:local": "npm run build && npx wrangler dev --local",
     "test": "npx nyc tape -r ts-node/register './tests/*.test.ts'",
     "lint": "npx eslint \"{tests,src}/**\""
   },
@@ -21,28 +21,40 @@
     "wrangler"
   ],
   "author": "Jack Scotson <jack.scotson@netacea.com> (https://netacea.com)",
+  "contributors": [
+    "Gracjan Pietruszyński <gracjan.pietruszynski@netacea.com> (https://netacea.com)"
+  ],
+  "maintainers": [
+    "Gracjan Pietruszyński <gracjan.pietruszynski@netacea.com> (https://netacea.com)"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Netacea/cloudflare-worker-template-typescript/issues"
   },
   "homepage": "https://github.com/Netacea/cloudflare-worker-template-typescript#readme",
   "devDependencies": {
-    "@cloudflare/workers-types": "^2.1.0",
+    "@cloudflare/workers-types": "^4.20230511.0",
     "@types/service-worker-mock": "^2.0.1",
-    "@types/tape": "^4.13.0",
-    "@typescript-eslint/eslint-plugin": "^5.36.2",
-    "@typescript-eslint/parser": "^5.36.2",
-    "eslint": "^8.23.0",
+    "@types/tape": "^4.13.4",
+    "@typescript-eslint/eslint-plugin": "^5.59.5",
+    "@typescript-eslint/parser": "^5.59.5",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "eslint": "^8.40.0",
     "nyc": "^15.1.0",
+    "querystring-es3": "^0.2.1",
     "service-worker-mock": "^2.0.5",
-    "tape": "^5.0.1",
-    "ts-loader": "^8.0.11",
+    "stream-browserify": "^3.0.0",
+    "tape": "^5.6.3",
+    "ts-loader": "^9.4.2",
     "ts-node": "^10.9.1",
-    "typescript": "^4.0.5",
-    "webpack": "^4.46.0",
-    "webpack-cli": "^4.2.0"
+    "typescript": "^5.0.4",
+    "url": "^0.11.0",
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1",
+    "wrangler": "^2.20.0"
   },
   "dependencies": {
-    "@netacea/cloudflare": "^5.1.14"
+    "@netacea/cloudflare": "^5.1.21"
   }
 }
