@@ -32,9 +32,8 @@ Here you can find several parameters which need to be properly configured:
   - `secretKey` - the Secret key for your domain. Provided by Netacea. Used to check the authenticity of cookies.
   - `mitigationType` - either "INGEST" or "MITIGATE" to disable / enable mitigation, respectively.
   - `cookieEncryptionKey` - used to encrypt cookie data. Can be provided by either the customer, or Netacea.
-  - `netaceaCookieName` - name of the mitigation cookie. Can be provided by either the customer, or Netacea. As a security best practice, the name of this cookie should not reveal its purpose.
-  - `netaceaCaptchaCookieName` - name of the captcha cookie. Can be provided by either the customer, or Netacea. Similarly to `netaceaCookieName`, this cookie should be named as to not reveal its purpose.
-  - `enableDynamicCaptchaContentType` - either `true` or `false`. When set to `true`, the `Content-Type` header returned from Mitigation Service will be set according to the `Accept` header. Supported `Accept` header values are `text/html`, and `application/json`. If another value is provided, `Content-Type` will default to `text/html`. Setting this to `false` will result in the `Content-Type` header being always set as `text/html`.
+  - `netaceaCookieName` - name of the Netacea cookie. Name should set so as not to conflict with existing cookies on site.
+  - `netaceaCaptchaCookieName` - name of the Netacea captcha cookie. Name should set so as not to conflict with existing cookies on site.
   - `timeout` (optional) - the number of milliseconds to wait for a response from the Mitigation API before proceeding to the origin website. Default 3000ms.
 
 ## 💻 Development
@@ -48,7 +47,10 @@ Please ensure that `worker.run(event, originRequest)` and `event.waitUntil(worke
 - `npm run dev:local` - alias for `wrangler dev --local` - live preview of your code in a cloudflare sandbox - accessible from only your machine.
 
 ## ☁ Publishing
-`npm run publish` is your friend. This will publish to your Cloudflare distribution
+
+The integration must be built with webpack before deployment via wrangler.
+You can do this yourself by running `npm run build`, or use `npm run publish`
+to build with webpack and publish to your Cloudflare distribution in one command.
 
 ## ❗ Issues
 If you run into issues with this specific project, please feel free to file an issue [here](https://github.com/Netacea/cloudflare-worker-template-typescript/issues). If the problem is with Wrangler, please file an issue [here](https://github.com/cloudflare/workers-sdk/tree/main/packages/wrangler).
