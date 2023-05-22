@@ -4,4 +4,4 @@ main = "./dist/worker.js"
 account_id = "EXAMPLE_ACCOUNT_ID"
 route = "EXAMPLE_ROUTE"
 
-compatibility_date = "CURRENT_DATE"
+compatibility_date = "2023-05-04"
