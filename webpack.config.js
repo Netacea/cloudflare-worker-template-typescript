@@ -1,16 +1,31 @@
 const path = require('path')
-
-const mode = process.env.NODE_ENV || 'production'
+const { ProvidePlugin } = require('webpack')
 
 module.exports = {
+  target: 'webworker',
   output: {
-    filename: `worker.${mode}.js`,
+    filename: `worker.js`,
     path: path.join(__dirname, 'dist')
   },
-  mode,
+  mode: 'production', // development mode breaks Cloudflare workers
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
-    plugins: []
+    plugins: [],
+    fallback: {
+      crypto: require.resolve('crypto-browserify'),
+      querystring: require.resolve('querystring-es3'),
+      buffer: require.resolve('buffer/'),
+      stream: require.resolve('stream-browserify'),
+      url: require.resolve('url/')
+    }
+  },
+  plugins: [
+    new ProvidePlugin({
+      Buffer: ['buffer', 'Buffer'],
+    })
+  ],
+  optimization: {
+    minimize: false
   },
   module: {
     rules: [

@@ -1,4 +1,6 @@
 import {handleRequestWithNetacea} from './handler'
-addEventListener('fetch', (event: FetchEvent) => {
-  return event.respondWith(handleRequestWithNetacea(event))
+
+addEventListener('fetch', event => {
+  const fetchEvent = event as FetchEvent
+  return fetchEvent.respondWith(handleRequestWithNetacea(fetchEvent))
 })

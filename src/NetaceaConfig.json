@@ -1,6 +1,10 @@
 {
-  "apiKey": "",
-  "secretKey": "",
+  "apiKey": "YOUR-API-KEY",
+  "secretKey": "YOUR-SECRET-KEY",
   "mitigationType": "INGEST",
+  "cookieEncryptionKey": "YOUR-COOKIE-ENCRYPTION-KEY",
+  "netaceaCookieName": "YOUR-COOKIE-NAME",
+  "netaceaCaptchaCookieName": "YOUR-CAPTCHA-COOKIE-NAME",
+  "enableDynamicCaptchaContentType": false,
   "timeout": 3000
 }
