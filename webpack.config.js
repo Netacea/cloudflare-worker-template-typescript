@@ -2,9 +2,16 @@ const path = require('path')
 const { ProvidePlugin } = require('webpack')
 
 module.exports = {
-  target: 'webworker',
+  entry: './src/index.ts',
+  target: 'web',
+  experiments: {
+    outputModule: true,
+  },
   output: {
-    filename: `worker.js`,
+    filename: `worker.mjs`,
+    library: {
+      type: 'module',
+    },
     path: path.join(__dirname, 'dist')
   },
   mode: 'production', // development mode breaks Cloudflare workers

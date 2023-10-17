@@ -57,6 +57,7 @@
     "wrangler": "^2.20.1"
   },
   "dependencies": {
-    "@netacea/cloudflare": "^5.1.61"
+    "@netacea/cloudflare": "^5.1.61",
+    "hono": "^3.7.6"
   }
 }
