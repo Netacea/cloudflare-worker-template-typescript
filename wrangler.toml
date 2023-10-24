@@ -1,5 +1,5 @@
 name = "netacea-worker"
-main = "./dist/worker.js"
+main = "./dist/worker.mjs"
 
 account_id = "EXAMPLE_ACCOUNT_ID"
 route = "EXAMPLE_ROUTE"

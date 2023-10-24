@@ -6,8 +6,7 @@ export async function handleRequestWithNetacea(
   event: FetchEvent
 ): Promise<Response> {
   const response = await worker.run(event, originRequest)
-  // TODO: ideally we would use "event.waitUntil" here:
-  await worker.ingest(event.request, response)
+  event.waitUntil(worker.ingest(event.request, response))
   return response
 }
 
