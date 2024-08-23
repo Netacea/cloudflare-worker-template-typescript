@@ -49,7 +49,7 @@ Please ensure that `worker.run(event, originRequest)` and `event.waitUntil(worke
 ## ☁ Publishing
 
 The integration must be built with webpack before deployment via wrangler.
-You can do this yourself by running `npm run build`, or use `npm run publish`
+You can do this yourself by running `npm run build`, or use `npm run deploy`
 to build with webpack and publish to your Cloudflare distribution in one command.
 
 ## ❗ Issues
