@@ -2,7 +2,7 @@ import proxyquire from 'proxyquire'
 import tape from 'tape'
 
 tape('Request handled', async (tap: tape.Test) => {
-  const { handleRequestWithNetacea } = proxyquire('../src/handler', {
+  const { handleRequestWithNetacea } = proxyquire.noCallThru()('../src/handler', {
     '@netacea/cloudflare': function () {
       return {
         run: () => ({
