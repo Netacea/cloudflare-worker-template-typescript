@@ -2,7 +2,7 @@ import proxyquire from 'proxyquire'
 import tape from 'tape'
 
 tape('Request handled', async (tap: tape.Test) => {
-  const { handleRequestWithNetacea } = proxyquire('../src/handler', {
+  const { handleRequestWithNetacea } = proxyquire.noCallThru()('../src/handler', {
     '@netacea/cloudflare': function () {
       return {
         run: () => ({
@@ -39,7 +39,7 @@ tape('Request handled', async (tap: tape.Test) => {
         t.equals(waitUntilCalledTimes, 1, 'Expects waitUntil to be called once')
       } catch (error: unknown) {
         const _err = error as Error
-        t.fail(`Erorr thrown from worker - ${_err.message}`)
+        t.fail(`Error thrown from worker - ${_err.message}`)
       }
     })
   }
