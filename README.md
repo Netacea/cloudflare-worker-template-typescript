@@ -16,10 +16,6 @@ To generate using Wrangler, run this command:
 wrangler generate netacea-cloudflare-worker https://github.com/netacea/cloudflare-worker-template-typescript
 ```
 
-Ensure the `@netacea/cloudflare` package is up to date by running:
-```bash
-npm i @netacea/cloudflare@latest
-```
 - Ensure you are [logged into Wrangler](https://developers.cloudflare.com/workers/wrangler/commands/#login).
 - Insert your wrangler credentials into the `wrangler.toml` file in the root directory (you only need to change `account_id`, `route`, and `compatibility_date` - the rest is okay).
 

@@ -39,7 +39,7 @@ tape('Request handled', async (tap: tape.Test) => {
         t.equals(waitUntilCalledTimes, 1, 'Expects waitUntil to be called once')
       } catch (error: unknown) {
         const _err = error as Error
-        t.fail(`Erorr thrown from worker - ${_err.message}`)
+        t.fail(`Error thrown from worker - ${_err.message}`)
       }
     })
   }
