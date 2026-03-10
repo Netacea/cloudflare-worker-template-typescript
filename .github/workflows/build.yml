@@ -8,9 +8,11 @@ jobs:
       matrix:
         node-version: [18.x, 20.x]
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+      with:
+        persist-credentials: false
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
@@ -22,9 +24,11 @@ jobs:
       matrix:
         node-version: [18.x, 20.x]
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+      with:
+        persist-credentials: false
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
