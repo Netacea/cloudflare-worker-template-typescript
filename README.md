@@ -11,14 +11,10 @@ This template is meant to be used with [Wrangler](https://developers.cloudflare.
 
 Node version `20` or later and npm version `10` or later is required.
 
-To generate using Wrangler, run this command:
-
-```bash
-wrangler generate netacea-cloudflare-worker https://github.com/netacea/cloudflare-worker-template-typescript
-```
+Please create a private copy of this template repository, then:
 
 - Ensure you are [logged into Wrangler](https://developers.cloudflare.com/workers/wrangler/commands/#login).
-- Insert your wrangler credentials into the `wrangler.toml` file in the root directory (you only need to change `account_id`, `route`, and `compatibility_date` - the rest is okay).
+- Update `wrangler.toml` with your `account_id` and worker `route`.
 
 ## ⚠️ Configuration
 
