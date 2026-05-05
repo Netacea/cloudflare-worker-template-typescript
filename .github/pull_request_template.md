@@ -1,3 +1,5 @@
+# Netacea/Cloudflare Worker Template
+
 ## Summary
 
 <!-- What changed? -->
