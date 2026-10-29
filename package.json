@@ -43,6 +43,6 @@
     "wrangler": "^4.123.0"
   },
   "dependencies": {
-    "@netacea/cloudflare": "^6.8.27"
+    "@netacea/cloudflare": "^6.8.28"
   }
 }
